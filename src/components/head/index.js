@@ -1,9 +1,7 @@
 import * as React from "react";
-import AppBar from "@material-ui/core/AppBar";
-import Box from "@material-ui/core/Box";
-import Toolbar from "@material-ui/core/Toolbar";
+
 import Button from "@material-ui/core/Button";
-import MenuIcon from "@material-ui/core/Menu";
+
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { ConfraternizacaoContext } from "../../Providers/Confraternizacao";

@@ -1,9 +1,16 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { CasamentoContext } from "../../Providers/Casamento";
 import { ConfraternizacaoContext } from "../../Providers/Confraternizacao";
 import { DrinkContext } from "../../Providers/Drinks";
 import { FormaturaContext } from "../../Providers/Formatura";
-import { BangIcon, Container, DivBang, List } from "./styles";
+import {
+  BangIcon,
+  Button,
+  Container,
+  DivBang,
+  List,
+  PositionButtons,
+} from "./styles";
 
 const DrinkList = () => {
   const { drinks } = useContext(DrinkContext);
@@ -30,11 +37,17 @@ const DrinkList = () => {
             <p>
               <strong> Quantidade de litro:</strong> {item.volume.value} Litros
             </p>
-            <button onClick={() => addToCasamentoList(item)}>Casamento</button>
-            <button onClick={() => addToFormaturaList(item)}>Formatura</button>
-            <button onClick={() => addToConfratList(item)}>
-              Confraternização
-            </button>
+            <PositionButtons>
+              <Button onClick={() => addToCasamentoList(item)}>
+                Casamento
+              </Button>
+              <Button onClick={() => addToFormaturaList(item)}>
+                Formatura
+              </Button>
+              <Button onClick={() => addToConfratList(item)}>
+                Confraternização
+              </Button>
+            </PositionButtons>
           </li>
         ))}
       </List>

@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   font-size: 12px;
+
   img {
     width: 40px;
     height: auto;
@@ -33,8 +34,9 @@ export const List = styled.ul`
   justify-content: center;
   flex-wrap: wrap;
   padding: 0;
+
   @media screen and (min-width: 600px) {
-    margin-top: 35px;
+    margin-top: 45px;
   }
 
   li {
@@ -46,5 +48,34 @@ export const List = styled.ul`
     width: 200px;
     height: 350px;
     justify-content: space-between;
+    box-shadow: 1px 9px 12px 7px rgba(159, 45, 45, 0.75);
   }
+`;
+export const Button = styled.button`
+  box-shadow: inset 0px 1px 0px 0px #caefab;
+  background: linear-gradient(to bottom, #77d42a 5%, #5cb811 100%);
+  background-color: #77d42a;
+  border-radius: 6px;
+  border: 1px solid #268a16;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  font-family: Arial;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 3px 18px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #aade7c;
+
+  ::hover {
+    filter: brightness(0.5);
+  }
+  ::active {
+    position: relative;
+    top: 1px;
+  }
+`;
+
+export const PositionButtons = styled.div`
+  margin-bottom: 10px;
 `;

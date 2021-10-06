@@ -7,9 +7,10 @@ export const Container = styled.div`
   margin: 0 auto;
   width: 100%;
   height: auto;
-  padding: 0;
+  padding: ;
   background-color: white;
 
+  box-shadow: 0px 0px 3px 0px #000000;
   @media (min-width: 600px) {
     flex-direction: row;
   }

@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { ConfraternizacaoContext } from "../../Providers/Confraternizacao";
 import { BangIcon, Container, DivBang, List } from "./styles";
 

@@ -1,6 +1,13 @@
 import { useContext } from "react";
 import { FormaturaContext } from "../../Providers/Formatura";
-import { BangIcon, Container, DivBang, List } from "./styles";
+import {
+  BangIcon,
+  Button,
+  Container,
+  DivBang,
+  List,
+  PositionButtons,
+} from "./styles";
 
 const Formatura = () => {
   const { formaturaList, removeToFormaturaList } = useContext(FormaturaContext);
@@ -24,9 +31,11 @@ const Formatura = () => {
             <p>
               <strong> Quantidade de litro:</strong> {item.volume.value} Litros
             </p>
-            <button onClick={() => removeToFormaturaList(item)}>
-              Remover Item
-            </button>
+            <PositionButtons>
+              <Button onClick={() => removeToFormaturaList(item)}>
+                Remover Item
+              </Button>
+            </PositionButtons>
           </li>
         ))}
       </List>

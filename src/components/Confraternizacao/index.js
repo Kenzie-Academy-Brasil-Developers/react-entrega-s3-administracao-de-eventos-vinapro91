@@ -1,6 +1,13 @@
 import { useContext } from "react";
 import { ConfraternizacaoContext } from "../../Providers/Confraternizacao";
-import { BangIcon, Container, DivBang, List } from "./styles";
+import {
+  BangIcon,
+  Button,
+  Container,
+  DivBang,
+  List,
+  PositionButtons,
+} from "./styles";
 
 const Confraternizacao = () => {
   const { confraternizacaoList, removeToConfratList } = useContext(
@@ -26,10 +33,12 @@ const Confraternizacao = () => {
             <p>
               <strong> Quantidade de litro:</strong> {item.volume.value} Litros
             </p>
-            <button onClick={() => removeToConfratList(item)}>
-              {" "}
-              Remover Item
-            </button>
+            <PositionButtons>
+              <Button onClick={() => removeToConfratList(item)}>
+                {" "}
+                Remover Item
+              </Button>
+            </PositionButtons>
           </li>
         ))}
       </List>

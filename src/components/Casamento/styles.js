@@ -38,6 +38,7 @@ export const List = styled.ul`
   }
 
   li {
+    padding-top: 6px;
     display: flex;
     flex-direction: column;
     margin: 5px;
@@ -47,4 +48,32 @@ export const List = styled.ul`
     height: 350px;
     justify-content: space-between;
   }
+`;
+
+export const Button = styled.button`
+  box-shadow: inset 0px 1px 0px 0px #cf866c;
+  background: linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+  background-color: #d0451b;
+  border-radius: 3px;
+  border: 1px solid #942911;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 13px;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #854629;
+
+  ::hover {
+    filter: brightness(0.5);
+  }
+  ::active {
+    position: relative;
+    top: 1px;
+  }
+`;
+
+export const PositionButtons = styled.div`
+  margin-bottom: 10px;
 `;

@@ -40,6 +40,7 @@ export const List = styled.ul`
   }
 
   li {
+    padding-top: 6px;
     display: flex;
     flex-direction: column;
     margin: 5px;

@@ -1,6 +1,13 @@
 import { useContext } from "react";
 import { CasamentoContext } from "../../Providers/Casamento";
-import { BangIcon, Container, DivBang, List } from "./styles";
+import {
+  BangIcon,
+  Button,
+  Container,
+  DivBang,
+  List,
+  PositionButtons,
+} from "./styles";
 
 const Casamento = () => {
   const { removeToCasamentoList, casamentoLista } =
@@ -25,9 +32,11 @@ const Casamento = () => {
             <p>
               <strong> Quantidade de litro:</strong> {item.volume.value} Litros
             </p>
-            <button onClick={() => removeToCasamentoList(item)}>
-              Remover Item
-            </button>
+            <PositionButtons>
+              <Button onClick={() => removeToCasamentoList(item)}>
+                Remover Item
+              </Button>
+            </PositionButtons>
           </li>
         ))}
       </List>
